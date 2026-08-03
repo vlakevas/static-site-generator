@@ -9,7 +9,7 @@ class TestHtmlNode(unittest.TestCase):
             "target": "_blank",
         }
         node = HTMLNode(None, None, None, test_props)
-        matching_case = 'href="https://www.google.com" target="_blank" '
+        matching_case = ' href="https://www.google.com" target="_blank"'
         self.assertEqual(node.props_to_html(), matching_case)
 
     def test_props_to_html_2(self):

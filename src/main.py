@@ -1,9 +1,15 @@
 from textnode import TextNode, TextType
+from htmlnode import HTMLNode
+from leafnode import LeafNode
 
 
 def main():
-    test_object = TextNode("This is some anchor text", TextType.LINK, "https://www.boot.dev")
-    print(test_object)
+    test_props = {
+        "href":"www.maia.com"
+    }
+    test_node = LeafNode("a","I love maia",test_props)
+    print(test_node.to_html())
+    print(None)
 
 
 if __name__ == "__main__":
