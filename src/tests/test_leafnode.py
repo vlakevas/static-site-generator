@@ -22,4 +22,5 @@ class TestLeafNode(unittest.TestCase):
 
     def test_missing_value(self):
         node = LeafNode("h1", None)
-        self.assertRaises(ValueError, node.to_html)
+        with self.assertRaises(ValueError):
+            node.to_html()

@@ -1,6 +1,6 @@
 from textnode import TextNode, TextType
-from htmlnode import HTMLNode
 from leafnode import LeafNode
+from parentnode import ParentNode
 
 
 def main():
@@ -8,8 +8,9 @@ def main():
         "href":"www.maia.com"
     }
     test_node = LeafNode("a","I love maia",test_props)
-    print(test_node.to_html())
-    print(None)
+    test_node2 = ParentNode("p",[test_node])
+    print(test_node2.to_html())
+    
 
 
 if __name__ == "__main__":
