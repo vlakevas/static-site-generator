@@ -1,15 +1,16 @@
 from textnode import TextNode, TextType
 from leafnode import LeafNode
 from parentnode import ParentNode
+from split_delimiter import split_nodes_delimiter
 
 
 def main():
-    test_props = {
-        "href":"www.maia.com"
-    }
-    test_node = LeafNode("a","I love maia",test_props)
-    test_node2 = ParentNode("p",[test_node])
-    print(test_node2.to_html())
+    
+
+    node = TextNode("This is text with a `code block` word", TextType.TEXT)
+    new_nodes = split_nodes_delimiter([node], "`", TextType.CODE)
+
+    print(new_nodes)
     
 
 
