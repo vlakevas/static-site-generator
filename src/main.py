@@ -1,16 +1,11 @@
-from textnode import TextNode, TextType
-from leafnode import LeafNode
-from parentnode import ParentNode
-from split_delimiter import split_nodes_delimiter
+from move_contents import move_contents
 
 
 def main():
+    DIR_PATH_STATIC = "./static"
+    DIR_PATH_PUBLIC = "./public"
+    move_contents(DIR_PATH_STATIC,DIR_PATH_PUBLIC)
     
-
-    node = TextNode("This is text with a `code block` word", TextType.TEXT)
-    new_nodes = split_nodes_delimiter([node], "`", TextType.CODE)
-
-    print(new_nodes)
     
 
 
