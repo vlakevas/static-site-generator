@@ -1,16 +1,22 @@
+import os
+import shutil
+
 from move_contents import move_contents
-from generate_page import generate_page
+from generate_pages_recursive import generate_pages_recursive
 
-DIR_PATH_STATIC = "./static"
-DIR_PATH_PUBLIC = "./public"
+dir_path_static = "./static"
+dir_path_public = "./public"
+dir_path_content = "./content"
+template_path = "./template.html"
 
-def main():
-    
-    move_contents(DIR_PATH_STATIC,DIR_PATH_PUBLIC)
-    generate_page("./content/index.md","./template.html","./public/index.html")
-    
 
-    
+def main() -> None:
+
+    print("Copying static files to public directory...")
+    move_contents(dir_path_static, dir_path_public)
+
+    print("Generating content...")
+    generate_pages_recursive(dir_path_content, template_path, dir_path_public)
     
 
 
