@@ -16,7 +16,7 @@ def main() -> None:
         basepath = "/"
     else:
         basepath = sys.argv[1]
-    print("Copying static files to public directory...")
+    print("Copying static files to docs directory...")
     move_contents(dir_path_static, dir_path_docs)
 
     print("Generating content...")

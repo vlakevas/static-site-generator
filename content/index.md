@@ -25,7 +25,7 @@ Here's the deal, **I like Tolkien**.
 
 1. Gandalf
 2. Bilbo
-3. Sam
+3. Laur
 4. Glorfindel
 5. Galadriel
 6. Elrond
